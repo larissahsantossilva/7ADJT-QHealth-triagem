@@ -3,6 +3,7 @@ package br.com.fiap.qhealth.ms.triagem.controller;
 import br.com.fiap.qhealth.ms.triagem.dto.TriagemRequest;
 import br.com.fiap.qhealth.ms.triagem.dto.TriagemResponse;
 import br.com.fiap.qhealth.ms.triagem.service.TriagemService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ public class TriagemController {
     public final TriagemService triagemService;
 
     @PostMapping
-    public ResponseEntity<TriagemResponse> defineTriagem(@RequestBody TriagemRequest triagemRequest) {
+    public ResponseEntity<TriagemResponse> defineTriagem(@Valid @RequestBody TriagemRequest triagemRequest) {
         logger.info("GET | {} | Iniciado defineTriagem");
         ResponseEntity<TriagemResponse> response = ResponseEntity.ok(triagemService.determinaPrioridade(triagemRequest));
         logger.info("GET | {} | Finalizado defineTriagem");
