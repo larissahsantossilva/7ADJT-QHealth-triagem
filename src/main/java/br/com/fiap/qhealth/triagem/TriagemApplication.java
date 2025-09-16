@@ -1,4 +1,4 @@
-package br.com.fiap.qhealth.ms.triagem;
+package br.com.fiap.qhealth.triagem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

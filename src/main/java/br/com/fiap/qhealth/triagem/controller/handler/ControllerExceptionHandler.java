@@ -1,7 +1,7 @@
-package br.com.fiap.qhealth.ms.triagem.controller.handler;
+package br.com.fiap.qhealth.triagem.controller.handler;
 
-import br.com.fiap.qhealth.ms.triagem.exception.dto.RecursoNaoEncontradoExcecaoDTO;
-import br.com.fiap.qhealth.ms.triagem.exception.RecursoNaoEncontradoException;
+import br.com.fiap.qhealth.triagem.exception.RecursoNaoEncontradoExcecaoDTO;
+import br.com.fiap.qhealth.triagem.exception.RecursoNaoEncontradoException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -36,4 +36,5 @@ public class ControllerExceptionHandler {
         });
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
+
 }

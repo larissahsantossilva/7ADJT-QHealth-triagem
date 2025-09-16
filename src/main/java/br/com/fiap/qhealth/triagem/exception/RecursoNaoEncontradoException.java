@@ -1,4 +1,4 @@
-package br.com.fiap.qhealth.ms.triagem.exception;
+package br.com.fiap.qhealth.triagem.exception;
 
 public class RecursoNaoEncontradoException extends RuntimeException {
 
@@ -6,4 +6,5 @@ public class RecursoNaoEncontradoException extends RuntimeException {
     public RecursoNaoEncontradoException(String errorMessage) {
         super(errorMessage);
     }
+
 }
